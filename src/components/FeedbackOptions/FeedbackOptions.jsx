@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Wrapper, Button } from './FeedbackOptions.styled';
-import Icons from 'components/Icons/Icons';
 
-export const FeedbackOptions = ({ options, onLeaveFeedback, icon: Icon = null}) => {
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <Wrapper>
       {options.map(option => (
@@ -13,7 +12,6 @@ export const FeedbackOptions = ({ options, onLeaveFeedback, icon: Icon = null}) 
           onClick={() => onLeaveFeedback(option)}
         >
               {option}
-                {Icon && <Icon size="24" />}
         </Button>
       ))}
     </Wrapper>
